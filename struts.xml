@@ -1,0 +1,38 @@
+
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="br.com.projeto.action" extends="struts-default">
+		<action name="teste" class="br.com.projeto.action.IndexAction">
+			<result name="success">index.jsp</result>
+
+		</action>
+
+		<action name="contato" class="br.com.projeto.action.ContatosAction">
+			<result name="success">contatos.jsp</result>
+
+		</action>
+		
+         <action name="a" class="br.com.projeto.action.AtagAction">
+			<result name="success">b.jsp</result>
+
+		</action>
+
+		<action name="b" class="br.com.projeto.action.BtagAction">
+			<result name="success">a.jsp</result>
+
+		</action>
+
+
+
+
+
+	</package>
+
+
+
+
+</struts>
