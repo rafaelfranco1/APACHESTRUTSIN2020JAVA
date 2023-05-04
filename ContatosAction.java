@@ -1,18 +1,13 @@
 package br.com.projeto.action;
 
+import com.opensymphony.xwork2.Action;
 
-import com.opensymphony.xwork2.ActionSupport;
-
-
-@SuppressWarnings("serial")
-public class ContatosAction extends ActionSupport {
+public class ContatosAction implements Action{
 
 	@Override
 	public String execute() throws Exception {
-		System.out.println("ex");
-		
+		System.out.println("Executou contatos");
 		return "success";
 	}
-	
-}
 
+}
