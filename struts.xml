@@ -2,14 +2,69 @@
           "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
           "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-    <package name="br.com.projeto.action" extends="struts-default">
-        <action name="teste" class="br.com.projeto.action.IndexAction">
-            <result name="success">hello.jsp</result>
-        </action>
-        
-          <action name="contato" class="br.com.projeto.action.ContatosAction">
-            <result name="success">contatos.jsp</result>
-        </action>
-    </package>
+	<constant name="struts.custom.i18n.resources" value="global"></constant>
+
+	<package name="br.com.projeto.action" extends="struts-default">
+		<action name="teste" class="br.com.projeto.action.IndexAction">
+			<result name="success">hello.jsp</result>
+		</action>
+
+		<action name="a" class="br.com.projeto.action.ATagAction">
+			<result name="success">b.jsp</result>
+		</action>
+
+		<action name="b" class="br.com.projeto.action.BTagAction">
+			<result name="success">a.jsp</result>
+		</action>
+
+		<action name="register" class="br.com.projeto.action.RegistrationAction">
+			<result name="success">welcome.jsp</result>
+			<result name="input">registration.jsp</result>
+		</action>
+		
+		<action name="set" class="br.com.projeto.action.SetTagAction">
+			<result name="success">set.jsp</result>
+		</action>
+		
+		<action name="selectAction" class="br.com.projeto.action.SelectAction" method="display">
+			<result name="none">select.jsp</result>
+		</action>
+		
+		<action name="selectResult" class="br.com.projeto.action.SelectAction">
+			<result name="success">resultSelect.jsp</result>
+		</action>
+		
+		<action name="textArea" class="br.com.projeto.action.TextAreaAction">
+			<result name="success">result.jsp</result>
+		</action>
+		
+		<action name="inputTextArea" class="br.com.projeto.action.TextAreaLinkAction">
+			<result name="success">textArea.jsp</result>
+		</action>
+		
+		<action name="checkBox" class="br.com.projeto.action.CheckBoxAction" method="display">
+			<result name="none">checkbox.jsp</result>
+		</action>
+		
+		<action name="inputCheckBox" class="br.com.projeto.action.CheckBoxAction">
+			<result name="success">resultCheckbox.jsp</result>
+		</action>
+		
+		<action name="radioButton" class="br.com.projeto.action.RadioButtonAction" method="display">
+			<result name="none">radioButton.jsp</result>
+		</action>
+		
+		<action name="inputRadioButton" class="br.com.projeto.action.RadioButtonAction">
+			<result name="success">resultRadioButton.jsp</result>
+		</action>
+		
+		<action name="doubleSelect" class="br.com.projeto.action.DoubleSelectAction" method="display">
+			<result name="none">doubleSelect.jsp</result>
+		</action>
+		
+		<action name="inputDoubleSelect" class="br.com.projeto.action.DoubleSelectAction">
+			<result name="success">resultdoubleSelect.jsp</result>
+		</action>
+	</package>
 
 </struts>
