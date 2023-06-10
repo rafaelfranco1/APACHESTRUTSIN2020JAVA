@@ -8,6 +8,9 @@ import com.opensymphony.xwork2.ActionSupport;
 @SuppressWarnings("serial")
 public class WAction extends ActionSupport{
 	
+	
+	private String youMonth;
+	private String youSearch;
 	private List <String> Engine ;
 	public List<String> getEngine() {
 		return Engine;
