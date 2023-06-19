@@ -4,7 +4,7 @@ public class LAction extends ActionSupport {
 	private List youSearch;
 	private List youMonth;
 	
-	//ggas
+	//ggass
 	
 	public String defaultSearch() {
 		return "www.google.com.br";
