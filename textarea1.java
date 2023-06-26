@@ -1,6 +1,6 @@
 /*
 
-<!--Index JSP!-->
+<!--Index . JSP!-->
 
 <s:url var="LINK14" value="taum"/>
 <a href="%{LINKt14}">TextAreaTest</a>
