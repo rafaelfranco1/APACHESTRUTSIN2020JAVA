@@ -14,6 +14,8 @@ name="youSearch" value="Engine"/>
 list="#{'1 - Janeiro' : '1 - Jeneiro' , '2 - Fevereiro' : '2 - Fevereiro' , '3 - Março' : '3 - Março' ;}"
 name="youMonth" value="2"/>
 
+<s:submit key="submit" name="submit"/>
+
 </s:form>
 
 <!-- vadois.jsp !-->
