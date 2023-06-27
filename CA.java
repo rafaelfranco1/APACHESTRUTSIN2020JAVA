@@ -15,11 +15,24 @@
 
 <s:property value="address"/>*/
 
+package br.com.projeto.action;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+@SuppressWarnings("serial")
 public class CA extends ActionSupport {
 	
 	private String address;
 	
-	//ggas;
+	
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	public String display() {
 		return NONE;
 	}
