@@ -2,7 +2,7 @@
 <!-- index.jsp !-->
 
 <s:url var="LINK16" value="caum"/>
-<a href="%{LINK16}"></a>
+<s:a href="%{LINK16}">TextArea</s:a></li>
 
 <!-- caum , obs criar address = Endereço no global properties!-->
 
