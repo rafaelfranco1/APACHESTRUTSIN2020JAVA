@@ -13,8 +13,7 @@
 
 <!-- cadois !-->
 
-<s:property value="address"/
->*/
+<s:property value="address"/>*/
 
 public class CA extends ActionSupport {
 	
