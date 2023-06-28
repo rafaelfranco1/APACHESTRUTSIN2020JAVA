@@ -40,7 +40,7 @@ public class RAAction extends ActionSupport{
 	}
 
 	else {
-		addFieldError("confirmpassword",getText("SEnhas diferentes");
+		addFieldError("confirmpassword",getText("Senhas diferentes");
 
 	}
 	
