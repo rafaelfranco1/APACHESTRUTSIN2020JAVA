@@ -1,59 +1,59 @@
-/*
-<!--index!-->
+package br.com.projeto.action;
 
-<s:url var="LINKX" value="raum"/>
-<a href="%{LINKX}">Registration</a>
+import com.opensymphony.xwork2.ActionSupport;
 
-<!-- raum!-->
-<s:form action="radois">
-	<s:textfield name="username"/>
-	<s:password name="password"/>
-	<s:password name="confirmPassword"/>
- 	<s:reset name="reset" key="reset"/>
-	<s:submit name="submit" key="submit"/>
-</s:form>
-<!--radois-->
-
-<s:property value="name"/>
-<s:property value="password"/>*/
-
+@SuppressWarnings("serial")
 public class RAAction extends ActionSupport{
 	
-	private String name;
-	private String password;
-	private String confirmpassword;
-	
-	//gggas generate getters and setters;
-	
-	if("".equals(getUsername)) {
-		addFieldError("username","Usuário não pode ser em branco");
-	}
-	
-	if("".equals(getPassword)) {
-		addFieldError("password","Senha não pode ser em branco");
-	}
-	
-	if("".equals(confirmpassword)) {
-		addFieldError("confirmpassword","Confirmar senha não pode ser em branco");
-	}
-	if(getPassword().equals(getConfirmPassword))) {
-	//nada é feito aqui
-	}
-
-	else {
-		addFieldError("confirmpassword",getText("Senhas diferentes");
-
-	}
-	
-	
-	
-	public String display () {
-		return NONE;
-	}
-	
-	public String execute () throws Exception {
 		
-		return "success";
-	}
+		private String username;
+		private String password;
+		private String confirmPassword;
+		
+		public String getUsername() {
+			return username;
+		}
+		public void setUsername(String username) {
+			this.username = username;
+		}
+		public String getPassword() {
+			return password;
+		}
+		public void setPassword(String password) {
+			this.password = password;
+		}
+		public String getConfirmPassword() {
+			return confirmPassword;
+		}
+		public void setConfirmPassword(String confirmPassword) {
+			this.confirmPassword = confirmPassword;
+		}
+		
 	
+		public void validate() {
+			if("".equals(getUsername())) {
+				addFieldError("username",getText("username.required"));
+			}
+			if("".equals(getPassword())){
+				addFieldError("password",getText("password.required"));
+			}
+			if("".equals(getConfirmPassword())){
+				addFieldError("confirmPassword",getText("confirmPassword.required"));
+			}
+			
+			
+		}
+		
+	
+		
+		
+		public String display() {
+			return "NONE";
+		}
+		
+		public String execute() throws Exception {
+			return "success";
+		}
+
+
 }
