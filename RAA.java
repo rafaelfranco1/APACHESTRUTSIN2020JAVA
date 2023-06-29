@@ -5,13 +5,13 @@
 <a href="%{LINKX}">Registration</a>
 
 <!-- raum!-->
-<s:form action="
+<s:form action="radois">
 	<s:textfield name="username"/>
 	<s:password name="password"/>
 	<s:password name="confirmPassword"/>
  	<s:reset name="reset" key="reset"/>
 	<s:submit name="submit" key="submit"/>
-
+</s:form>
 <!--radois-->
 
 <s:property value="name"/>
