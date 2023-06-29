@@ -5,11 +5,12 @@
 <a href="%{LINKX}">Registration</a>
 
 <!-- raum!-->
-
-<s:input name="name" key="name"/>
-<s:password name="password" key="password"/>
-<s:password name="confirmpassword" key="confirmpassword" obs : olhar nos properties/>
-<s:submit name="submit" key="submit"/>
+<s:form action="
+	<s:textfield name="username"/>
+	<s:password name="password"/>
+	<s:password name="confirmPassword"/>
+ 	<s:reset name="reset" key="reset"/>
+	<s:submit name="submit" key="submit"/>
 
 <!--radois-->
 
