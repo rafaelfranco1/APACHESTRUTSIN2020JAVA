@@ -5,11 +5,20 @@ import com.opensymphony.xwork2.ActionSupport;
 @SuppressWarnings("serial")
 public class RAAction extends ActionSupport{
 	
-		
+		private String cp;
 		private String username;
 		private String password;
-		private String confirmPassword;
 		
+		
+		
+	
+	
+		public String getCp() {
+			return cp;
+		}
+		public void setCp(String cp) {
+			this.cp = cp;
+		}
 		public String getUsername() {
 			return username;
 		}
@@ -22,30 +31,37 @@ public class RAAction extends ActionSupport{
 		public void setPassword(String password) {
 			this.password = password;
 		}
-		public String getConfirmPassword() {
-			return confirmPassword;
-		}
-		public void setConfirmPassword(String confirmPassword) {
-			this.confirmPassword = confirmPassword;
-		}
+		
 		
 	
 		public void validate() {
 			if("".equals(getUsername())) {
 				addFieldError("username",getText("username.required"));
 			}
+			
 			if("".equals(getPassword())){
 				addFieldError("password",getText("password.required"));
 			}
-			if("".equals(getConfirmPassword())){
-				addFieldError("confirmPassword",getText("confirmPassword.required"));
+			
+			if("".equals(getCp())) {
+				addFieldError("cp",getText("cpassword.required"));
 			}
 			
+			//if (getPassword() != null && getCp() != null && !getPassword().equals(getCp())) {
+			  //  addFieldError("cp", getText("cpassword.notmatch"));
+			//}
+			if (getPassword()!=null && getCp()!=null) {
+				if (getPassword().equals(getCp())) {
+					
+				}
+				else {
+					addFieldError("cp", getText("cpassword.notmatch"));
+				}
+			}
 			
 		}
 		
 	
-		
 		
 		public String display() {
 			return "NONE";
