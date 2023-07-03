@@ -10,7 +10,7 @@
 	<s:password name="password"/>
 	<s:password name="cp"/>
 	<s:submit name="submit" key="submit"/>
-</s:form> <!-- Os names são encontrados no global properties. O nome cp é de confirmPassword em uma forma abreviada!-->
+</s:form> <!-- Os names são encontrados no global properties. O nome cp é de confirmPassword em uma forma abreviada!!-->
 
 <!--tadois!-->
 <s:property value="username"/>
