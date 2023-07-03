@@ -4,8 +4,8 @@
 <s:url var="LINKX" value="taaum.jsp"/> <!--isso faz que não vá variáveis nulas!-->
 <a href="%{LINKX}">Register2</a>
 
-<!--taa.jsp!-->
-<s:form action="taaum">
+<!--taaum.jsp!-->
+<s:form action="tadois">
 	<s:textfield name="username"/>
 	<s:password name="password"/>
 	<s:password name="cp"/>
