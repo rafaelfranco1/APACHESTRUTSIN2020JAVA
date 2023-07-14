@@ -1,4 +1,4 @@
-/*<!--JSP!--> 
+/*<!--JSP! maaaction DA JAAction--> 
 <s:url var="LINKX" value="da"/>
 <s:a href="%{LINKX}"> LINKX</a>
 
