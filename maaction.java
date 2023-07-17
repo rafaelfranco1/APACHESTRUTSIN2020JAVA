@@ -15,6 +15,19 @@
 
 <!--mad!-->
 
+<!--properties!-->
+	username = Nome do Usuario
+	submit = Enviar
+	password = Senha
+	cp = Confirme a senha
+	address = Endereco
+	reset = Limpar
+
+	username.required = O nome do usuario deve ser preenchido
+	password.required = A senha do usuario deve ser preenchida
+	cpassword.required = Confirme a  senha do usuario deve ser preenchida
+	cpassword.notmatch = As senhas são diferentes
+
 <s:property value="username"/>
 <br>
 <s:property value="password"/>
