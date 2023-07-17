@@ -32,34 +32,75 @@
 <br>
 <s:property value="password"/>
 
-public class MAAction extends ActionSupport {
+package br.com.projeto.action;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+@SuppressWarnings("serial")
+public class MAAction extends ActionSupport{
 	
 	private String username;
 	private String password;
 	private String cp;
 	
-	//ggas
+	
+	
+	public String getUsername() {
+		return username;
+	}
+
+
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+
+	public String getCp() {
+		return cp;
+	}
+
+
+
+	public void setCp(String cp) {
+		this.cp = cp;
+	}
+	
+	public void validate() {
 	
 	if("".equals(getUsername())) {
-		addFieldError("username","username.required");
-	}
-	
-	if("".equals(getPassword())) {
-		addFieldError("password","password.required");
-	}
-	if("".equals(getCp())){
-		addFieldError("cp","confirmPassword.required");
-	}
-	
-	if(getPassword().equals(getCp())) {
+		addFieldError("username",getText("username.required"));
 		
 	}
 	
-	else {
-		addFieldError("cp","password.notmatch");
+	if("".equals(getPassword())) {
+		
+		addFieldError("password",getText("password.required"));
 	}
 	
+	if("".equals(getCp())) {
+		addFieldError("cp",getText("cpassword.required"));
+	}
+		
+	}
+
 	public String execute() throws Exception {
 		return "success";
+		
 	}
+	
+
 }
