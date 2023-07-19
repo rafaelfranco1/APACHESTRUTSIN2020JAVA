@@ -94,6 +94,13 @@ public class MAAction extends ActionSupport{
 	if("".equals(getCp())) {
 		addFieldError("cp",getText("cpassword.required"));
 	}
+
+       if(getCp().equals(getPassword())) {
+		
+	}
+	else {
+		addFieldError("cp",getText("cpassword.notmatch"));
+	}
 		
 	}
 
