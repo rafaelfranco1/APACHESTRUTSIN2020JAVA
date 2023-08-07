@@ -1,22 +1,24 @@
-/*<!--index.jsp!-->
-<s:url var="LINKX" value="zzaction.jsp" /> <!-- colocando a extensão .jsp faz com que valores não chegem nulos!-->
-<s:a href="%{LINKX}">Registration </s:a>
+/*
+<!--index!-->
+<s:url var="LINKX" value="yyaction.jsp"/><!--isso faz os valores não chegarem nulos!--> 
+<s:a href="%{LINKX}"> Registration Action</s>
 
-<!--zzaction.jsp!-->
-<s:form action="zb">
+<!--yyaction!-->
+
+<s:form action="yb">
 	<s:textfield key="username"/>
 	<s:password key="password"/>
 	<s:password key="cp"/>
-	<s:password key="submit" name="submit"/>
-	<s:password key="reset" name="reset"/>
+	<s:submit key="submit" name="submit"/>
+	<s:reset key="reset" name="reset"/>
 </s:form>
 
-<!--zb!-->
+<!--yb!-->
 
 <s:property value="username"/>
 <s:property value="password"/>*/
 
-public class ZZAction extends ActionSupport {
+public class YYAction extends ActionSupport {
 	
 	private String username;
 	private String password;
@@ -24,31 +26,29 @@ public class ZZAction extends ActionSupport {
 	
 	//ggas
 	
-	public void validate {
-		
-		if("".equals(getUsername())) {
-			addFieldError("username","username.required");
-		}
-		
-		if("".equals(getPassword())) {
-			addFieldError("password","password.required");
-		}
-		
-		if("".equals(getCp())) {
-			addFieldError("cp","confirmPassword.required");
-		}
-		
-		if(getUsername().equals(getPassword())) {
-		
-		}
-		else`{
-			addFieldError("cp","cpassword.notmatch");
-		}			
+	if("".equals(getUsername())) {
+		addFieldError("username","username.required");
 	}
 	
+	if("".equals(getPassword())) {
+		addFieldError("password","password.required");
+	}
+	
+	if("".equals(getCp())) {
+		addFieldErro("cp","password.required");
+	}
+	
+	if(getPassword().equals(getCp())) {
+		
+	}
+	
+	else {
+		addFieldError("cp","cpnotmatch");
+	}
 	public String execute() throws Exception {
 		return "success";
 	}
 	
 	
 }
+
