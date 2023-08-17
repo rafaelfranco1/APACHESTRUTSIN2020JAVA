@@ -7,12 +7,12 @@
 
 
 <s:form action="vadois.jsp">
-<s:select label="Selecione o site" list="Engine" Headerkey="-1" HeaderValue="Select Search"
-name="youSearch" value="Engine"/>
+	<s:select label="Selecione o site" list="Engine" Headerkey="-1" HeaderValue="Select Search"
+	name="youSearch" value="Engine"/>
 
-<s:select label="Selecione o mês" HeaderKey="-1" HeaderValue="Select Value"
-list="#{'1 - Janeiro' : '1 - Jeneiro' , '2 - Fevereiro' : '2 - Fevereiro' , '3 - Março' : '3 - Março' ;}"
-name="youMonth" value="2"/>
+	<s:select label="Selecione o mês" HeaderKey="-1" HeaderValue="Select Value"
+	list="#{'1 - Janeiro' : '1 - Jeneiro' , '2 - Fevereiro' : '2 - Fevereiro' , '3 - Março' : '3 - Março' ;}"
+	name="youMonth" value="2"/>
 
 <s:submit key="submit" name="submit"/>
 
