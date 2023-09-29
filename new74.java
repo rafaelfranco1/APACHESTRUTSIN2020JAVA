@@ -24,7 +24,17 @@ public class RadioButtonAction extends ActionSupport {
 		language.add("CH","CHILE");
 		language.add("PY","Paraguai");
 	}
+	public String getDefaultGender() {
+		return UNKNOWN;
+	}
 	
+	public String getDefaultLanguage() {
+		return "BR";
+	}
+	
+	public String getDefaultAnswer() {
+		return "NO";
+	}
 	public String display() {
 		return NONE;
 	}
