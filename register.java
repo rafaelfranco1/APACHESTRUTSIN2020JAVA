@@ -35,13 +35,13 @@ public class RegistrationAction extends ActionSupport {
 	public String validate() {
 		
 		if("".equals(getUsername())) {
-			addFieldError("username",getText("username.notnull"));
+			addFieldError("username",getText("username.required"));
 		}
 		if("".equals(getPassword())) {
-			addFieldError("password",getText("password.notnull"));
+			addFieldError("password",getText("password.required"));
 		}
 		if("".equals(getCp())){
-			addFieldError("cp",getText("cp","cp.notnull"));
+			addFieldError("cp",getText,"cp.required"));
 		}
 		
 		if(getPassword.equals(getCp())){
