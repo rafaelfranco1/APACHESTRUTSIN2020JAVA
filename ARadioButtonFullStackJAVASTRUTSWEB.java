@@ -34,10 +34,6 @@ public class RadioButton extends ActionSupport {
 		return "NOTBIN";
 	}
 	
-	public String getDefaultAnswer() {
-		return "YES";
-	}
-	
 	public String display() {
 		return "none";
 	}
