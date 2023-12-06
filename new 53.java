@@ -27,3 +27,11 @@ public class TextAreaAction extends ActionSupport {
 	
 	
 }
+
+Será necessário alterar a procedure que faz a liberação:
+    Se liberação de movimentação
+        Caso alguma movimentação que foi selecionada já estiver como liberada, não fazer nada.
+        Senão, deixar o processo normal.
+    Se desfazer a liberação,
+        Caso alguma movimentação que foi selecionada já estiver como cadastrada, não fazer nada.
+        Senão, deixar o processo normal
