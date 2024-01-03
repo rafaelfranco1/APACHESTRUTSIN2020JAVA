@@ -48,8 +48,14 @@ public class RegistrationInput extends ActionSupport {
 			addFieldError("cp","cp.required");
 		}
 		
-		if(getPassword()!= null && getUsername != null && getPassword().) {
+		if(getPassword()!= null && getUsername != null && getPassword()) {
+			if (getPassword().equals(getCp()){
+				
+			}
 			
+			else {
+				addFieldError("cp","password.notmathc"));
+			}
 		}
 		
 		
