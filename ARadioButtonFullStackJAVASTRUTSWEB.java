@@ -44,12 +44,12 @@ public class RadioButton extends ActionSupport {
 }
 package br.com.projeto.model;
 public class Language {
-	private String LanguageCode;
-	private String LanguageDisplay;
+	private String languageCode;
+	private String languageDisplay;
 	
 	public Language(String LanguageCode ,String LanguageDisplay) {
-		this.LanguageCode = LanguageCode;
-		this.LanguageDisplay = LanguageDisplay;
+		this.languageCode = languageCode;
+		this.languageDisplay = languageDisplay;
 	}
 	
 	
