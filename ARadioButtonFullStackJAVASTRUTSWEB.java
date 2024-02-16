@@ -47,7 +47,7 @@ public class Language {
 	private String LanguageCode;
 	private String LanguageDisplay;
 	
-	public Language(LanguageCode , LanguageDisplay) {
+	public Language(String LanguageCode ,String LanguageDisplay) {
 		this.LanguageCode = LanguageCode;
 		this.LanguageDisplay = LanguageDisplay;
 	}
