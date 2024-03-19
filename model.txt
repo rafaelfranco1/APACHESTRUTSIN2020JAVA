@@ -1,0 +1,7 @@
+public int id { get ; set ; }
+
+public string Street { get ; set }
+
+public string city { get ; set }
+
+public string State { get ; set } 
