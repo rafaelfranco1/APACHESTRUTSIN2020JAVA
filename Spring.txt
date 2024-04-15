@@ -1,0 +1,8 @@
+Apps in Spring MVC smaller apps . 
+MVC 
+
+Controller Layer - http://localhost:8080 /  URLS navegação 
+Model Layer - Representação de dados extrair do banco ou colocar 
+Handler Mapping - Checa a URL 
+
+View Layer - 
