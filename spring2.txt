@@ -1,0 +1,11 @@
+Spring Web - RESTful, build web Spring MVC
+Spring Data JPA - Persist data in SQL
+PostgreSQL - Data base manager
+H2 - mais simples de instalar
+Validation I/O
+Previa xml pom
+src main java com.example.springboot SpringBootAplication -> classe principal do projeto
+@SpringBootAplication
+resource application.properties - Base de dados, filas entre outras coisas 
+resource static / templates - views e interfaces 
+
