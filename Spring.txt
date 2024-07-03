@@ -1,8 +1,52 @@
-Apps in Spring MVC smaller apps . 
-MVC 
+import java.math.BigDecimal;
+import java.io.Serializable;
+import java.util.UUID;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Id;
 
-Controller Layer - http://localhost:8080 /  URLS navegação 
-Model Layer - Representação de dados extrair do banco ou colocar 
-Handler Mapping - Checa a URL 
+@Entity //jakarta persistence
+@Table(name = "TB_PRODUCTS") //jakarta persistence
+public class ProductModel implements Serializabe { //jakarta.io
+	private static final long serialVersionUID = 1L;//controle de versão , para as 
+	//classes que forem serializadas 
+	@Id //jakarta persistence
+	@GeneratedValue(strategy=GenerationType.Auto) //jakarta persistence
+	private UUID idProduct; //java util uuid são universais e não sequenciais
+	private String name;
+	private BigDecimal value; //java.math
+	
+	public UUID getIdProduct() {
+		return idProduct;
+	}
+	
+	public UUID setIdProduct(UUID idProduct) {
+		this.idProduct = idProduct;
+	}
+	
+	public String  getName() {
+		return name;
+	}
+	
+	public String setName(String name) {
+		this.name = name;
+	}
+	
+	public BigDecimal getValue() {
+		return value;
+	}
+	
+	public BigDecimal setValue(BigDecimal value) {
+		this.value = value;
+	}
+}
 
-View Layer - 
+//repositories interface do JPA diversos métodos prontos sem precisar implementar cada
+//um deles 
+
+public interface ProductRepository extends JpaRepository<ProductModel, UUID> {
+	
+	
+	
+	
+}
