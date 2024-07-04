@@ -1,3 +1,5 @@
+//47
+
 import java.math.BigDecimal;
 import java.io.Serializable;
 import java.util.UUID;
@@ -12,7 +14,8 @@ public class ProductModel implements Serializabe { //jakarta.io
 	//classes que forem serializadas 
 	@Id //jakarta persistence
 	@GeneratedValue(strategy=GenerationType.Auto) //jakarta persistence
-	private UUID idProduct; //java util uuid são universais e não sequenciais
+	private UUID idProduct; //java util uuid são universais e não sequenciais em arquiteturas
+	//distribuidas de microservices, identificadores distribuidos evita muitos conflitas
 	private String name;
 	private BigDecimal value; //java.math
 	
@@ -43,10 +46,18 @@ public class ProductModel implements Serializabe { //jakarta.io
 
 //repositories interface do JPA diversos métodos prontos sem precisar implementar cada
 //um deles 
-
+//47
+import com.example.springboot.models.ProductModel;
+import java.util.UUID;
+@Repository
 public interface ProductRepository extends JpaRepository<ProductModel, UUID> {
 	
 	
 	
 	
 }
+
+//beans - determinada classe é um bean , 
+//@Component bean generico gerenciado por ele
+//@Service - Classe de serviço regra de negócio
+//@Controller gerenciada por ele mas pode ter endpoints 
