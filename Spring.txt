@@ -1,4 +1,4 @@
-//47
+//51
 
 import java.math.BigDecimal;
 import java.io.Serializable;
@@ -46,18 +46,46 @@ public class ProductModel implements Serializabe { //jakarta.io
 
 //repositories interface do JPA diversos métodos prontos sem precisar implementar cada
 //um deles 
-//47
+//46
 import com.example.springboot.models.ProductModel;
 import java.util.UUID;
 @Repository
-public interface ProductRepository extends JpaRepository<ProductModel, UUID> {
+public interface ProductRepository extends JpaRepository<ProductModel, UUID> { //precisa extender
+//o JpaRepository 
+	
+	
+	
+	
+}
+//Estudar beans do spring
+//beans - determinada classe é um bean , 
+//@Component bean generico gerenciado por ele
+//@Service - Classe de serviço regra de negócio
+//@Repository - Gerenciada por ele com transações com base de dados
+//@Controller gerenciada por ele mas pode ter endpoints 
+
+//Controllers
+@RestController
+public class ProductController {
+	
+	@Autowired
+	ProductRepository productRepository;//ponto de injeção para a interface com acesso
+	//aos metodos jpa quando tiver necessidade
+	
+	//DTO - Data Transfer Object
+	
 	
 	
 	
 	
 }
 
-//beans - determinada classe é um bean , 
-//@Component bean generico gerenciado por ele
-//@Service - Classe de serviço regra de negócio
-//@Controller gerenciada por ele mas pode ter endpoints 
+//POST receber o recurso e salvar na base de dados poderia ser por model 
+//
+//
+public record ProductRecordDto(String name , BigDecimal value) {
+	//records são imutaveis 
+	
+	
+	
+}
