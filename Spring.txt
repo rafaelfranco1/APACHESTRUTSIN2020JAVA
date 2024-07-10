@@ -70,21 +70,40 @@ public class ProductController {
 	
 	@Autowired
 	ProductRepository productRepository;//ponto de injeção para a interface com acesso
-	//aos metodos jpa quando tiver necessidade
+	//aos metodos jpa quando tiver necessidade para usar nosso repositório 
 	
 	//DTO - Data Transfer Object
+	//metodo post http
+	//precisa colocar @Valid
+	//Bean utils converter dto para model 
+	@PostMapping("/products")
+	public ResponseEntity<ProductModel> saveProduct(@RequestBody @Valid ProductRecordDto productRecordDto) {
+		var productModel = new ProductModel();
+		BeanUtils.copyProperties(productRecordDto, productModel);
+		return ResponseEntity.status(HttpStatus.CREATED).body(productRepository.save(productModel));
+	}
 	
-	
-	
-	
+	//4 Niveis
+	//Nivel 0 - Usar o protocolo HTTP
+	//Primeiro nivel - Recursos bem definidos e o correto usa das URI , de substantivos 
+	//Nivel 2 - Metodos HTTP de forma semantica , ou seja usar os metodos para 
+	//qual foram feitos . SALVAR utilizamos POST , apenas listar GET , deletar DELETE 
+	//atualizar PUT 
 	
 }
 
 //POST receber o recurso e salvar na base de dados poderia ser por model 
 //
 //
-public record ProductRecordDto(String name , BigDecimal value) {
-	//records são imutaveis 
+//para receber estes valores precisa do DTO 
+//records para fazer DTO
+//se tudo tiver certo faz a conversão para o model 
+//escolher record 
+//importar jakarta validation
+//Serialização para o objeto java , fazer as validações iniciais , depois transformar em model
+
+public record ProductRecordDto(@NotBlank String name , @NotNull BigDecimal value) {
+	//records são imutaveis apenas metódos getters , privates e final 
 	
 	
 	
