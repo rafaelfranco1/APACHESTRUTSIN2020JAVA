@@ -3,7 +3,7 @@
 <s:url var="LINK15" value="yaum">
 <a href="%{LINK15}">tEXT_AREA</a>
 
-<!-- yaum.jsp!-->
+<!-- yaum.jsp!!-->
 <s:form action="yadois">
 	<s:textarea  name="address" cols="30" rows="30"/>
 	<s:submit name="submit" key="submit">
