@@ -1,0 +1,12 @@
+using Microsoft.AspNetCore.Mvc;
+
+namespace RunGroopWebApp1.Data
+{
+    public class ClubController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+    }
+}
